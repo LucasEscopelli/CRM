@@ -15,12 +15,13 @@ import java.util.UUID;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Cliente {
     @Id
     @GeneratedValue
     private Long id;
 
-//    @Builder.Default
+    @Builder.Default
     private UUID uuid = UUID.randomUUID();
     private String nome;
     private String dataDeNascimento;
