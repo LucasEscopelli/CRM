@@ -20,10 +20,14 @@ public class Cadastro {
 
     @Builder.Default
     private UUID uuid = UUID.randomUUID();
+    @Column(nullable = false)
     private String nome;
     private String descricao;
+    @Column(name = "data_de_nascimento")
     private Long dataDeNascimento;
+    @Column(name = "atual_age", nullable = false)
     private int atualAge;
+    @Column(name = "cpf_ou_cnpj", nullable = false)
     private String cpfOuCnpj;
 
     private String email;
